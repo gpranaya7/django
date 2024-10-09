@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>topics & name</h1>
+        <table>
+            <tr>
+                <th>
+                    tname
+                </th>
+            </tr>
+            {% for to in nto %}
+            <tr>
+                <td>
+                    {{to.topic_name}}
+                </td>
+            </tr>
+            {% for no in to.webpage_set.all %}
+            <tr>
+                <td>
+                    {{no.name}}
+                </td>
+            </tr>
+            {% endfor %}
+            {% endfor %}
+        </table>
+    </center>
+    
+</body>
+</html>
