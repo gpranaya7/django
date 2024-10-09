@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>emp details</h1>
+        <table>
+            <tr>
+                <th>
+                    ename
+                </th>
+                <th>empno</th>
+            </tr>
+            {% for eo in leo %}
+            <tr>
+                <td>
+                    {{eo.ename}}
+                </td>
+                <td>{{eo.empno}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+
+    
+</body>
+</html>

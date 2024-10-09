@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>emp & dept names</h1>
+        <table>
+            <tr>
+                <th>
+                    ename
+
+                </th>
+                <th>
+                    dname
+                </th>
+            </tr>
+            {% for item in doed  %}
+            <tr>
+                <td>
+                    {{item.ename}}
+                </td>
+                <td>
+                    {{item.deptno.dname}}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+    
+</body>
+</html>
