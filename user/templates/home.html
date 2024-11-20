@@ -1,0 +1,23 @@
+{% extends 'user_register.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% block body_block %}
+    <center>
+        {% if un %}
+        <h1>welcome mr/ms {{un}}</h1>
+        {% else %}
+        <h1>welcome to homepage</h1>
+        {% endif %}
+    
+    </center>
+  
+    {% endblock %}
+</body>
+</html>
