@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block body_block %}
+    <center>
+        <h1>details of {{scobject.scname}}</h1>
+        <h2>school name is {{scobject.scname}}</h2>
+        <h2>school's principal name is {{scobject.principal}}</h2>
+        <h2>school's location is {{scobject.loc}}</h2>
+        <h1>students are</h1>
+        {% for sto in scobject.students.all %}
+        <h2>student's name is {{sto.sname}}</h2>
+        <h2>student's age is {{sto.age}} </h2>
+        {% endfor %}
+
+
+
+    <a href="{% url 'SchoolUpdate' pk=scobject.pk %}" class='btn btn-secondary' >update</a>
+    <a href="{% url 'SchoolDelete' pk=scobject.pk %}" class="btn btn-danger">delete </a>
+    </center>
+    {% endblock %}
+    
+</body>
+</html>

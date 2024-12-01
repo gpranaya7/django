@@ -1,0 +1,20 @@
+{% extends 'app/struct.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block body_block %}
+    <center>
+        <h1>schools</h1>
+        {% for sco in schools %}
+        <a href="{{sco.pk}}"><h2>{{sco.scname}}</h2></a>
+        {% endfor %}
+    </center>
+    {% endblock %}
+    
+</body>
+</html>
