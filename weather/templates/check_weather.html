@@ -1,0 +1,61 @@
+{% extends 'user_register.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block body_block %}
+
+    <center>
+        <h1>search </h1>
+        {% if weather_data %}
+
+        <table border="3px">
+            <tr>
+                <th>username
+                </th>
+                <th>city</th>
+                <th>temperature</th>
+                <th>humidity</th>
+                <th>weather</th>
+                <th>speed</th>
+                <th>timestamp</th>
+            </tr>
+           <tr>
+            <td>
+                {{weather_data.user}}
+
+            </td>
+            <td>        {{weather_data.city}}
+            </td>
+            <td>
+                {{weather_data.temperature}}
+            </td>
+            <td>
+                {{weather_data.humidity}}
+            </td>
+            <td>{{weather_data.weather}}</td>
+            <td>{{weather_data.speed}}</td>
+
+            <td>{{weather_data.timestamp}}</td>
+           </tr>
+
+
+        </table>
+        {% else %}
+            <form action="" method="post">
+                {% csrf_token %}
+                <label for="city">city name</label>
+                <input type="text" name="city" id="city">
+                <input type="submit" value="search">
+            </form>
+           {% endif %}
+        
+    </center>
+    {% endblock %}
+
+</body>
+</html>
